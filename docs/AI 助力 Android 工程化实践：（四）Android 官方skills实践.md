@@ -203,69 +203,83 @@ Android 官方目前提供的 Skills，覆盖的是 Android 开发中最常见�
 - [Android Skills 官方文档](https://developer.android.com/tools/agents/android-skills)
 - [Android Skills GitHub 仓库](https://github.com/android/skills)
 
-第一步，先安装 Android CLI。进入官方文档中的下载页面，下载对应系统的 Android CLI，然后把 `android` 命令加入系统环境变量。
+---
 
-安装完成后，可以在终端验证：
+**第一步：下载并配置 Android CLI**
+
+进入官方下载页面，下载对应系统的 Android CLI 二进制文件，将 `android` 命令加入系统环境变量。
+
+验证安装是否成功：
 
 ```bash
 android --help
 ```
 
-如果已经能看到 Android CLI 的帮助信息，说明命令可用了。为了确保使用的是最新版本，建议先执行一次：
+看到帮助信息说明命令已就绪。建议顺手更新到最新版本：
 
 ```bash
 android update
 ```
 
-第二步，初始化 Agent 使用环境。官方建议执行：
+---
+
+**第二步：初始化 Agent 使用环境**
 
 ```bash
 android init
 ```
 
-这个命令会安装 `android-cli` skill，让 Agent 更容易理解和使用 Android CLI 本身。
+这一步会向 Agent 的 skills 目录中安装 `android-cli` skill，让 Agent 更容易理解和使用 Android CLI 本身。相当于给 Agent 读一本"怎么用 android 命令"的说明书。
 
-第三步，查看当前可安装的 Android Skills：
+---
+
+**第三步：查看可安装的 Skills 列表**
 
 ```bash
 android skills list
 ```
 
-如果想看更详细的信息，可以使用：
+可以看到当前所有可安装的官方 Skills。查看详细信息可加 `--long` 参数：
 
 ```bash
 android skills list --long
 ```
 
-第四步，安装 Android Skills。
+---
 
-如果要一次性安装全部官方 Android Skills，使用：
+**第四步：安装 Skills**
+
+安装全部官方 Skills：
 
 ```bash
 android skills add --all
 ```
 
-如果只安装某一个 Skill，例如 edge-to-edge：
+安装指定单个 Skill：
 
 ```bash
 android skills add --skill=edge-to-edge
 ```
 
-如果要指定安装到某个 Agent，可以加上 `--agent` 参数：
+指定安装到某个 Agent（例如 Codex）：
 
 ```bash
 android skills add --all --agent=codex
 ```
 
-需要注意的是，不同工具对 Agent 名称的识别可能不完全一样。如果没有指定 `--agent`，Android CLI 会尝试安装到它检测到的 Agent skills 目录中。
+> 注意：不同工具对 Agent 名称的识别可能不一致。如果不指定 `--agent`，Android CLI 会自动选择它检测到的 Agent。
 
-安装完成后，可以检查 Codex 的 skills 目录。Windows 上一般是：
+---
+
+**第五步：验证安装结果**
+
+检查 Codex 的 skills 目录，Windows 上一般在：
 
 ```text
 C:\Users\<用户名>\.codex\skills
 ```
 
-里面应该能看到类似这样的目录：
+正常情况下应该看到六个 Skill 目录：
 
 ![.codex/skills 目录结构](./resources/android-skills-practice/codex-skills-directory.png)
 
@@ -279,30 +293,34 @@ C:\Users\<用户名>\.codex\skills
 └── r8-analyzer/
 ```
 
-每个 Skill 目录下面都应该有一个 `SKILL.md` 文件。
+每个目录下都有 `SKILL.md`，这是 Agent 实际读取的文件。
 
-安装完成后，建议重启 Codex CLI 或新开一个 Codex 会话，让 Codex 重新加载 Skills。
+---
 
-最后，进入你的真实 Android 项目，而不是 Android Skills 仓库：
+**第六步：重启 Codex 并开始使用**
+
+安装完成后，重启 Codex CLI 或新开一个会话，让 Agent 重新加载 Skills。
+
+进入你的真实 Android 项目（注意不是 Android Skills 仓库本身）：
 
 ```bash
 cd D:\CodeStation\YourAndroidProject
 codex
 ```
 
-在 Codex CLI 中，最稳的使用方式是直接在 Prompt 里点名 Skill：
+在 Codex 中使用 Skill，最稳的方式是直接在 Prompt 里点名：
 
 ```text
 使用 migrate-xml-views-to-jetpack-compose skill，先分析 app/src/main/res/layout/fragment_home.xml 的迁移方案，不要改代码。
 ```
 
-确认方案后，再继续让 Codex 修改和验证：
+确认方案可行后，再让 Codex 执行修改并验证：
 
 ```text
 按刚才的方案修改代码，并运行 ./gradlew :app:compileDebugKotlin 验证。
 ```
 
-这样整个链路就跑通了：Android CLI 负责安装 Skills，Codex 负责读取 Skill 并执行任务，开发者负责确认方案和验收结果。
+这样整个链路就跑通了：**Android CLI 负责安装**，**Codex 负责读取 Skill 并执行任务**，**开发者负责确认方案和验收结果**。
 
 ## 4. Demo：使用 XML → Compose Skill 完成一次迁移
 
