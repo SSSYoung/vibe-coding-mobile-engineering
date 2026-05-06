@@ -1,17 +1,19 @@
+# AI 助力 Android 工程化实践：（四）Android 官方 Skills 实践
+
+---
+
 ## 1. 什么是 Skill
 
 在聊 Android Skills 之前，先把 **Skill** 这个概念讲清楚。
 
 很多人第一次看到 Skill，会下意识把它理解成插件、脚本或者某种自动化工具。但实际上，Skill 的本质更接近一份 **写给 AI Agent 的任务操作手册**。
 
-它不是让开发者手动阅读后照着一步步操作的普通文档，而是让 Codex、Gemini、Claude Code、Cursor 这类 AI Agent 在执行某一类任务时，能够提前知道：
+它不是让开发者手动阅读后照着一步步操作的普通文档，而是让 Codex、Gemini、Claude Code、Cursor 这类 AI Agent 在执行某一类任务时，提前知道任务边界、执行步骤和验证方式。
 
-- 这个任务适合在什么场景下使用
-- 开始修改代码前应该先检查哪些文件
-- 哪些地方可以改，哪些地方不要碰
-- 修改过程应该遵守什么边界
-- 修改完成后应该如何验证
-- 遇到风险时应该如何拆分步骤
+可以把它理解成这样：
+
+> [!TIP]
+> 开发者任务 → Codex / Agent → 读取 SKILL.md → 分析 / 修改 / 验证 → 输出可审查结果
 
 换句话说，普通 Prompt 只能告诉 AI：**我要做什么**。
 
@@ -76,45 +78,28 @@ Agent 就可以根据 Skill 中定义好的流程去分析项目、制定迁移�
 
 所以，Prompt 更像一次性的任务描述；Skill 更像可以反复使用的专项能力。
 
-| 对比项 | 普通 Prompt | Skill |
-|---|---|---|
-| 使用方式 | 每次临时描述需求 | 预先沉淀成可复用能力 |
-| 内容重点 | 告诉 AI 要做什么 | 告诉 AI 这类任务怎么做 |
-| 稳定性 | 依赖提示词质量 | 依赖结构化任务流程 |
-| 复用性 | 较弱 | 较强 |
-| 适用场景 | 临时需求、简单任务 | 迁移、升级、适配、分析等复杂任务 |
+> [!NOTE]
+> **普通 Prompt**
+> 临时描述需求，质量依赖提示词完整度。适合简单任务，但复杂迁移容易遗漏步骤和边界。
+>
+> [!TIP]
+> **Skill**
+> 预先沉淀任务流程，告诉 Agent 这类任务应该怎么做。适合迁移、升级、适配、分析等复杂任务。
 
 ### 1.3 Skill 和 Rules、MCP 的区别
 
 前面几篇文章里，我们已经聊过 Cursor Rules 和 MCP。Skill 和它们并不是同一种东西，但三者可以组合使用。
 
-简单来说：
+简单来说，三者分工可以这样看：
 
-| 能力 | 解决的问题 | 更像什么 |
+| Rules | MCP | Skill |
 |---|---|---|
-| Rules | 让 AI 遵守团队代码规范 | 团队编码约束 |
-| MCP | 让 AI 获取外部上下文或调用工具 | 外部能力接口 |
-| Skill | 让 AI 掌握某类任务的执行流程 | 专项任务手册 |
-
-举个 Android 场景：
-
-- `Rules` 可以规定：项目必须使用 Kotlin、StateFlow、Hilt、Compose
-- `MCP` 可以让 AI 读取 Figma 设计稿、内部接口文档或团队知识库
-- `Skill` 可以告诉 AI：XML 到 Compose 迁移应该先分析 XML、再设计 Composable、再通过 ComposeView 渐进接入，最后做编译和 UI 对比验证
+| 管规范 | 管上下文 / 工具 | 管任务流程 |
+| 让 AI 遵守团队代码风格和架构约束 | 让 AI 获取 Figma、内部文档、接口等外部信息 | 让 AI 按专项任务步骤执行 |
 
 所以它们的分工并不冲突。
 
-Rules 管的是 **代码应该符合什么规范**。
-
-MCP 管的是 **AI 能拿到哪些外部信息和工具**。
-
-Skill 管的是 **某一类任务应该按什么流程执行**。
-
-如果把 AI Agent 当成一个团队成员，那么：
-
-- Rules 像团队开发规范
-- MCP 像它能访问的工具和资料库
-- Skill 像某个专项任务的 SOP
+如果把 AI Agent 当成一个团队成员，Rules 像团队开发规范，MCP 像它能访问的工具和资料库，Skill 像某个专项任务的 SOP。
 
 这也是为什么 Android 官方 Skills 值得关注。它不是再写一篇“教你如何升级 AGP”或“教你如何迁移 Compose”的文章，而是把这些官方推荐流程变成 Agent 可以直接读取和执行的任务知识。
 
@@ -181,22 +166,36 @@ Android 官方目前提供的 Skills，覆盖的是 Android 开发中最常见�
 
 ### 3.1 Android 官方 6 大核心 Skills
 
-| Skill | 领域 | 适合解决的问题 |
-|---|---|---|
-| `agp-9-upgrade` | 构建 | 升级 Android Gradle Plugin 9，处理 Gradle、Kotlin、KSP、废弃配置等迁移问题 |
-| `migrate-xml-views-to-jetpack-compose` | UI | 将 XML View 安全、渐进式迁移到 Jetpack Compose |
-| `navigation-3` | 架构 | 接入或迁移 Jetpack Navigation 3 |
-| `r8-analyzer` | 性能 | 分析 R8 / ProGuard keep 规则，减少冗余配置和包体积风险 |
-| `play-billing-library-version-upgrade` | 商业化 | 升级 Google Play Billing Library，降低支付和订阅链路迁移风险 |
-| `edge-to-edge` | 系统适配 | 适配 Android 15 edge-to-edge，处理系统栏、WindowInsets、IME 等问题 |
+> [!TIP]
+> **`agp-9-upgrade`** — 构建升级：AGP 9 / Gradle / Kotlin / KSP
 
-这 6 个 Skill 的共同点是：它们都不是“写一个函数”这种简单任务，而是需要分析上下文、控制边界、分步骤验证的工程任务。
+> [!TIP]
+> **`migrate-xml-views-to-jetpack-compose`** — UI 迁移：XML → Compose
+
+> [!TIP]
+> **`navigation-3`** — 导航架构：Jetpack Navigation 3
+
+> [!TIP]
+> **`r8-analyzer`** — 包体积优化：R8 / ProGuard keep 规则
+
+> [!TIP]
+> **`play-billing-library-version-upgrade`** — 支付升级：Google Play Billing Library
+
+> [!TIP]
+> **`edge-to-edge`** — 系统适配：Android 15 edge-to-edge
+
+这 6 个 Skill 的共同点是：它们都不是”写一个函数”这种简单任务，而是需要分析上下文、控制边界、分步骤验证的工程任务。
 
 比如 XML 到 Compose 迁移，真正重要的不是把 `TextView` 翻译成 `Text`，而是保持原有业务逻辑不变，尽量渐进式接入 Compose，并在迁移后验证 UI 和交互是否一致。
 
 ### 3.2 从 0 到 1：使用 Android CLI 安装 Android Skills
 
 官方推荐通过 **Android CLI** 来安装和管理 Android Skills。这样做的好处是不用手动去复制 Skill 目录，CLI 会帮你发现、下载并安装到对应 Agent 的 skills 目录中。
+
+整体流程如下：
+
+> [!TIP]
+> 下载 Android CLI → android update → android init → android skills list → android skills add --all → 重启 Codex CLI → 点名 Skill
 
 官方入口：
 
@@ -268,6 +267,8 @@ C:\Users\<用户名>\.codex\skills
 
 里面应该能看到类似这样的目录：
 
+![.codex/skills 目录结构](./resources/android-skills-practice/codex-skills-directory.png)
+
 ```text
 .codex/skills/
 ├── agp-9-upgrade/
@@ -327,7 +328,7 @@ app/src/main/java/com/example/demoapp/skills/XmlToComposeDemoActivity.kt
 
 迁移前效果：
 
-<img src="./Screenshot_20260506_161110.png" alt="XML Demo 页面迁移前效果" width="320">
+<img src="./resources/android-skills-practice/xml-demo-before.png" alt="XML Demo 页面迁移前效果" width="320">
 
 ### 4.1 使用的 Prompt
 
@@ -488,7 +489,7 @@ private fun StatusBlock(statusText: String) {
 
 迁移后效果：
 
-<img src="./image.png" alt="XML Demo 页面迁移后效果" width="320">
+<img src="./resources/android-skills-practice/xml-demo-after.png" alt="XML Demo 页面迁移后效果" width="320">
 
 可以看到，迁移后的页面视觉结构和迁移前基本保持一致：标题区、状态提示、统计卡片、检查列表和底部按钮都被保留下来，只是 UI 实现方式从 XML 切换成了 Compose。
 
@@ -528,15 +529,16 @@ metadata:
 
 `name` 是 Agent 识别 Skill 的稳定名称；`description` 用来描述适用场景；`keywords` 则进一步标记这个 Skill 的领域关键词。
 
-这里最值得注意的是两个词：`interoperability` 和 `incremental adoption`。
+这里最值得注意的是两个词：`interoperability`（互操作性）和 `incremental adoption`（渐进式接入）。
 
 它们说明官方并不是鼓励一次性推倒重写，而是强调新旧 UI 的互操作和渐进式迁移。
 
-官方在 `Objective` 中先定义迁移目标：
+官方在 `Objective`（目标）中先定义迁移目标：
 
 ```text
 To systematically convert a single legacy XML layout into modern, declarative Jetpack Compose UI while maintaining pixel-perfect visual parity and functional integrity.
 ```
+（系统化地将单个遗留 XML 布局转换为现代声明式 Jetpack Compose UI，同时保持像素级视觉一致性和功能完整性。）
 
 这句话其实定义了整个 Skill 的边界。
 
@@ -544,10 +546,10 @@ To systematically convert a single legacy XML layout into modern, declarative Je
 
 这里有几个关键词：
 
-- `single legacy XML layout`：一次只迁移一个 XML 布局，避免范围失控
-- `declarative Jetpack Compose UI`：迁移目标是声明式 Compose UI
-- `visual parity`：迁移前后视觉要尽量一致
-- `functional integrity`：功能行为不能被破坏
+- `single legacy XML layout`（单个遗留 XML 布局）：一次只迁移一个 XML 布局，避免范围失控
+- `declarative Jetpack Compose UI`（声明式 Jetpack Compose UI）：迁移目标是声明式 Compose UI
+- `visual parity`（视觉一致）：迁移前后视觉要尽量一致
+- `functional integrity`（功能完整性）：功能行为不能被破坏
 
 这就是官方 Skill 的第一个启发：先定义清楚目标，再让 Agent 动手。
 
@@ -556,6 +558,7 @@ To systematically convert a single legacy XML layout into modern, declarative Je
 ```text
 This skill migrates UI (XML to Jetpack Compose) only.
 ```
+（此 Skill 仅迁移 UI，即 XML → Jetpack Compose。）
 
 官方明确告诉 Agent：这个 Skill 只做 UI 迁移，不负责业务逻辑重构。
 
@@ -568,16 +571,16 @@ This skill migrates UI (XML to Jetpack Compose) only.
 官方给出的迁移流程是 10 步：
 
 ```text
-1. Identify the optimal XML candidate for migration
-2. Analyze the project and layout
-3. Create a plan
-4. Capture the XML View UI
-5. Set up Compose dependencies and compiler
-6. Set up Compose theming
-7. Migrate the XML layout to Compose
-8. Validate the migration
-9. Replace usages
-10. XML code removal
+1. Identify the optimal XML candidate for migration   识别候选 XML
+2. Analyze the project and layout                   分析项目和布局
+3. Create a plan                                    制定迁移计划
+4. Capture the XML View UI                          捕获迁移前 UI
+5. Set up Compose dependencies and compiler         配置依赖和编译器
+6. Set up Compose theming                           配置 Compose 主题
+7. Migrate the XML layout to Compose                迁移布局到 Compose
+8. Validate the migration                           验证迁移结果
+9. Replace usages                                   替换引用
+10. XML code removal                                清理旧 XML
 ```
 
 这 10 步很能体现官方 Skill 的写法。
@@ -623,6 +626,7 @@ Capture the XML View UI
 ```text
 Do not migrate the entire theme. Implement only the minimum theming required.
 ```
+（不要迁移整个主题。只需实现最小必要的主题配置。）
 
 这个约束很重要：不要因为迁移一个页面，就顺手把整个项目主题体系都重构掉。
 

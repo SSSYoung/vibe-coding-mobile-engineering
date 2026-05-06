@@ -1,5 +1,7 @@
 # Vibe Coding x Android 工程化实践
 
+⚠️ **声明**：本文内容由 AI 代笔完成，思路推导、Demo 实践与技术审核均由本人完成。
+
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/SSSYoung/android-vibe-coding?style=social)](https://github.com/SSSYoung/android-vibe-coding)
 
@@ -39,10 +41,8 @@
 #### （三）自建 MCP Server：让大模型接入内部知识库
 **阅读链接**：[AI 助力 Android 工程化实践：（三）自建 MCP Server：让大模型接入内部知识库](docs/AI%20助力%20Android%20工程化实践：（三）自建%20MCP%20Server：让大模型接入内部知识库.md)
 
-### 即将发布
-
-- 更多 Vibe Coding 在 Android 开发中的应用实践
-- 架构约束与设计模式实践
+#### （四）Android 官方 Skills 实践
+**阅读链接**：[AI 助力 Android 工程化实践：（四）Android 官方 Skills 实践](docs/AI%20助力%20Android%20工程化实践：（四）Android%20官方skills实践.md)
 
 ## A2UI系列：面向Agent的声明式UI协议
 
@@ -50,15 +50,15 @@
 
 ### 📝 A2UI文章列表
 
-#### （四）A2UI：面向 Agent 的声明式 UI 协议（一）：A2UI 是什么
+#### （一）A2UI：面向 Agent 的声明式 UI 协议（一）：A2UI 是什么
 
 **阅读链接**：[A2UI：面向 Agent 的声明式 UI 协议（一）：A2UI 是什么](docs/A2UI：面向%20Agent%20的声明式%20UI%20协议（一）：A2UI%20是什么.md)
 
-#### （五）A2UI：面向 Agent 的声明式 UI 协议（二）：实践_Agent服务端和客户端实现
+#### （二）A2UI：面向 Agent 的声明式 UI 协议（二）：实践_Agent服务端和客户端实现
 
 **阅读链接**：[A2UI：面向 Agent 的声明式 UI 协议（二）：实践_Agent服务端和客户端实现](docs/A2UI：面向%20Agent%20的声明式%20UI%20协议（二）：实践_Agent服务端和客户端实现.md)
 
-#### （六）A2UI：面向 Agent 的声明式 UI 协议（三）：相关概念和技术架构
+#### （三）A2UI：面向 Agent 的声明式 UI 协议（三）：相关概念和技术架构
 
 **阅读链接**：[A2UI：面向 Agent 的声明式 UI 协议（三）：相关概念和技术架构](docs/A2UI：面向%20Agent%20的声明式%20UI%20协议（三）：相关概念和技术架构.md)
 

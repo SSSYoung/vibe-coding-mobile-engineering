@@ -12,7 +12,10 @@
       "WebFetch(domain:www.figma.com)",
       "Skill(update-config)",
       "Skill(update-config:*)",
-      "WebFetch(domain:minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com)"
+      "WebFetch(domain:minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com)",
+      "Bash(mv \"Screenshot_20260506_161110.png\" \"resources/android-skills-practice/xml-demo-before.png\")",
+      "Bash(mv \"image.png\" \"resources/android-skills-practice/xml-demo-after.png\")",
+      "Bash(mv \"image-1.png\" \"resources/android-skills-practice/codex-skills-directory.png\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\uidq9989\\.claude"
