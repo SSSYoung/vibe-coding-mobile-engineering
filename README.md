@@ -19,6 +19,7 @@
 
 - [项目介绍](#-项目介绍)
 - [文章列表](#-文章列表)
+- [Skill系列](#skill系列)
 - [A2UI系列](#a2ui系列)
 - [Vibe Coding 作品集](#vibe-coding-作品集)
 
@@ -41,8 +42,19 @@
 #### （三）自建 MCP Server：让大模型接入内部知识库
 **阅读链接**：[AI 助力 Android 工程化实践：（三）自建 MCP Server：让大模型接入内部知识库](docs/AI%20助力%20Android%20工程化实践：（三）自建%20MCP%20Server：让大模型接入内部知识库.md)
 
-#### （四）Android 官方 Skills 实践
-**阅读链接**：[AI 助力 Android 工程化实践：（四）Android 官方 Skills 实践](docs/AI%20助力%20Android%20工程化实践：（四）Android%20官方skills实践.md)
+## Skill系列：AI Agent 的可复用工作流
+
+> 探索如何把 AI Agent 的任务经验沉淀为可复用、可执行、可验证的工作流
+
+### 📝 Skill文章列表
+
+#### （四）Skill：AI Agent 的可复用工作流（四）：Android 官方 Skills 实践
+
+**阅读链接**：[Skill：AI Agent 的可复用工作流（四）：Android 官方 Skills 实践](docs/AI%20助力%20Android%20工程化实践：（四）Android%20官方skills实践.md)
+
+#### （五）Skill：AI Agent 的可复用工作流（五）：使用 Codex Skill Creator 创建自己的 Skill
+
+**阅读链接**：[Skill：AI Agent 的可复用工作流（五）：使用 Codex Skill Creator 创建自己的 Skill](docs/AI%20助力%20Android%20工程化实践：（五）使用%20Codex%20Skill%20Creator%20创建自己的%20Skill.md)
 
 ## A2UI系列：面向Agent的声明式UI协议
 

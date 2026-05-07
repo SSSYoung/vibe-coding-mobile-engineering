@@ -15,7 +15,15 @@
       "WebFetch(domain:minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com)",
       "Bash(mv \"Screenshot_20260506_161110.png\" \"resources/android-skills-practice/xml-demo-before.png\")",
       "Bash(mv \"image.png\" \"resources/android-skills-practice/xml-demo-after.png\")",
-      "Bash(mv \"image-1.png\" \"resources/android-skills-practice/codex-skills-directory.png\")"
+      "Bash(mv \"image-1.png\" \"resources/android-skills-practice/codex-skills-directory.png\")",
+      "WebFetch(domain:sports.cctv.com)",
+      "Bash(curl -s \"https://sports.cctv.com/2020/06/05/VIDEROzNzfUR5P47P2qyndxK200605.shtml\")",
+      "Bash(curl -s \"https://p1.img.cctvpic.com/photoAlbum/templet/common/DEPA1565254619482142/sports.videcreat.js\")",
+      "Bash(curl -s \"https://vdn.apps.cctv.com/api/v1/getVideoInfo?guid=712a8ff2dc8f45b4b924b478b9edb800\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2, ensure_ascii=False\\)\\)\")",
+      "Bash(curl -s --connect-timeout 10 \"https://vdn.apps.cctv.com/api/v1/getVideoInfo?guid=712a8ff2dc8f45b4b924b478b9edb800\" -H \"User-Agent: Mozilla/5.0\")",
+      "Bash(curl -s --connect-timeout 10 \"https://js.player.cntv.cn/creator/vodplayer.js\")",
+      "Bash(curl -s --connect-timeout 15 \"https://vdn.apps.cctv.cn/api/getHttpVideoInfo.do?guid=712a8ff2dc8f45b4b924b478b9edb800&IMB3RDMKBVKGBYPTHB3RDMKBVKGBYPTHB3RDMKBVKGBYPTHB3RDMKBVKG\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\uidq9989\\.claude"
