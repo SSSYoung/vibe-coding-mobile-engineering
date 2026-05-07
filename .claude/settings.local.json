@@ -23,7 +23,10 @@
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2, ensure_ascii=False\\)\\)\")",
       "Bash(curl -s --connect-timeout 10 \"https://vdn.apps.cctv.com/api/v1/getVideoInfo?guid=712a8ff2dc8f45b4b924b478b9edb800\" -H \"User-Agent: Mozilla/5.0\")",
       "Bash(curl -s --connect-timeout 10 \"https://js.player.cntv.cn/creator/vodplayer.js\")",
-      "Bash(curl -s --connect-timeout 15 \"https://vdn.apps.cctv.cn/api/getHttpVideoInfo.do?guid=712a8ff2dc8f45b4b924b478b9edb800&IMB3RDMKBVKGBYPTHB3RDMKBVKGBYPTHB3RDMKBVKGBYPTHB3RDMKBVKG\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\")"
+      "Bash(curl -s --connect-timeout 15 \"https://vdn.apps.cctv.cn/api/getHttpVideoInfo.do?guid=712a8ff2dc8f45b4b924b478b9edb800&IMB3RDMKBVKGBYPTHB3RDMKBVKGBYPTHB3RDMKBVKGBYPTHB3RDMKBVKG\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\")",
+      "Bash(codex --version)",
+      "Read(//Users/young/.config/**)",
+      "Read(//Users/young/.codex/**)"
     ],
     "additionalDirectories": [
       "C:\\Users\\uidq9989\\.claude"

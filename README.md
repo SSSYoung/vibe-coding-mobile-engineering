@@ -48,13 +48,13 @@
 
 ### 📝 Skill文章列表
 
-#### （四）Skill：AI Agent 的可复用工作流（四）：Android 官方 Skills 实践
+#### Skill：AI Agent 的可复用工作流（一）：Android 官方 Skills 实践
 
-**阅读链接**：[Skill：AI Agent 的可复用工作流（四）：Android 官方 Skills 实践](docs/AI%20助力%20Android%20工程化实践：（四）Android%20官方skills实践.md)
+**阅读链接**：[Skill：AI Agent 的可复用工作流（一）：Android 官方 Skills 实践](docs/Skill：AI%20Agent%20的可复用工作流（一）：Android%20官方%20Skills%20实践.md)
 
-#### （五）Skill：AI Agent 的可复用工作流（五）：使用 Codex Skill Creator 创建自己的 Skill
+#### Skill：AI Agent 的可复用工作流（二）：使用 Codex Skill Creator 创建自己的 Skill
 
-**阅读链接**：[Skill：AI Agent 的可复用工作流（五）：使用 Codex Skill Creator 创建自己的 Skill](docs/AI%20助力%20Android%20工程化实践：（五）使用%20Codex%20Skill%20Creator%20创建自己的%20Skill.md)
+**阅读链接**：[Skill：AI Agent 的可复用工作流（二）：使用 Codex Skill Creator 创建自己的 Skill](docs/Skill：AI%20Agent%20的可复用工作流（二）：使用%20Codex%20Skill%20Creator%20创建自己的%20Skill.md)
 
 ## A2UI系列：面向Agent的声明式UI协议
 
