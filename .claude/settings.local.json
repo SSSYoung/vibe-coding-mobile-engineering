@@ -33,7 +33,9 @@
       "Bash(sed -i '67d' /Users/young/codestation/android-vibe-coding/README.md)",
       "Bash(sed -i '66a\\\\**阅读链接**：[SubAgent：Claude Code 的可复用工作流]\\(docs/SubAgent：Claude%20Code%20的可复用工作流.md\\)' /Users/young/codestation/android-vibe-coding/README.md)",
       "Bash(python3 -c ' *)",
-      "Bash(python3)"
+      "Bash(python3)",
+      "Bash(mkdir -p /Users/young/codestation/android-vibe-coding/docs/resources)",
+      "Bash(mv /Users/young/codestation/android-vibe-coding/docs/image.png /Users/young/codestation/android-vibe-coding/docs/image-1.png /Users/young/codestation/android-vibe-coding/docs/resources/)"
     ],
     "additionalDirectories": [
       "C:\\Users\\uidq9989\\.claude"

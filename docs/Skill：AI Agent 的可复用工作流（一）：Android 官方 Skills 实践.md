@@ -1,7 +1,7 @@
 # Skill：AI Agent 的可复用工作流（一）：Android 官方 Skills 实践
 
 ---
-
+![alt text](image-1.png)
 ## 1. 什么是 Skill
 
 在聊 Android Skills 之前，先把 **Skill** 这个概念讲清楚。
@@ -124,7 +124,7 @@ Android 开发里有很多任务，表面上是“改代码”，实际上是“
 这让 AI 不只是“生成代码”，而是更接近“按 Android 官方实践完成一次工程任务”。
 
 ## 2. Google 官方 Android Skills 要解决什么
-
+![alt text](image.png)
 ### 2.1 通用 AI 写 Android 的问题
 
 现在的 AI 编程工具已经能熟练生成 Kotlin、XML、Jetpack Compose，甚至可以修改 Gradle 配置。
