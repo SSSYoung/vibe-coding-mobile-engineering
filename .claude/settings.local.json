@@ -26,7 +26,9 @@
       "Bash(curl -s --connect-timeout 15 \"https://vdn.apps.cctv.cn/api/getHttpVideoInfo.do?guid=712a8ff2dc8f45b4b924b478b9edb800&IMB3RDMKBVKGBYPTHB3RDMKBVKGBYPTHB3RDMKBVKGBYPTHB3RDMKBVKG\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\")",
       "Bash(codex --version)",
       "Read(//Users/young/.config/**)",
-      "Read(//Users/young/.codex/**)"
+      "Read(//Users/young/.codex/**)",
+      "Bash(mkdir -p /Users/young/codestation/android-vibe-coding/docs/resources/subagent)",
+      "Bash(mv /Users/young/codestation/android-vibe-coding/docs/image*.png /Users/young/codestation/android-vibe-coding/docs/resources/subagent/)"
     ],
     "additionalDirectories": [
       "C:\\Users\\uidq9989\\.claude"
