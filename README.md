@@ -20,6 +20,8 @@
 - [项目介绍](#-项目介绍)
 - [文章列表](#-文章列表)
 - [Skill系列](#skill系列)
+- [SubAgent系列](#subagent系列)
+- [Claude Agent Team系列](#claude-agent-team系列)
 - [A2UI系列](#a2ui系列)
 - [Vibe Coding 作品集](#vibe-coding-作品集)
 
@@ -65,6 +67,12 @@
 #### SubAgent：Claude Code 的可复用工作流
 
 **阅读链接**：[SubAgent：Claude Code 的可复用工作流](docs/SubAgent：Claude%20Code%20的可复用工作流.md)
+
+## Claude Agent Team系列：多 AI 实例协同工作
+
+> 探索多个 AI 实例如何协同工作，实现更复杂的任务
+
+### 📝 Claude Agent Team文章列表
 
 #### Claude Agent Team：多 AI 实例协同工作
 
