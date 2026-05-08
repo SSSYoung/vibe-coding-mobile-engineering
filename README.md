@@ -66,6 +66,10 @@
 
 **阅读链接**：[SubAgent：Claude Code 的可复用工作流](docs/SubAgent：Claude%20Code%20的可复用工作流.md)
 
+#### Claude Agent Team：多 AI 实例协同工作
+
+**阅读链接**：[Claude Agent Team：多 AI 实例协同工作](docs/Claude%20Agent%20Team：多%20AI%20实例协同工作.md)
+
 ## A2UI系列：面向Agent的声明式UI协议
 
 > 探索AI Agent与UI开发的深度融合，构建声明式的用户界面交互协议

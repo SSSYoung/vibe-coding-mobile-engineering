@@ -28,7 +28,12 @@
       "Read(//Users/young/.config/**)",
       "Read(//Users/young/.codex/**)",
       "Bash(mkdir -p /Users/young/codestation/android-vibe-coding/docs/resources/subagent)",
-      "Bash(mv /Users/young/codestation/android-vibe-coding/docs/image*.png /Users/young/codestation/android-vibe-coding/docs/resources/subagent/)"
+      "Bash(mv /Users/young/codestation/android-vibe-coding/docs/image*.png /Users/young/codestation/android-vibe-coding/docs/resources/subagent/)",
+      "Bash(xxd)",
+      "Bash(sed -i '67d' /Users/young/codestation/android-vibe-coding/README.md)",
+      "Bash(sed -i '66a\\\\**阅读链接**：[SubAgent：Claude Code 的可复用工作流]\\(docs/SubAgent：Claude%20Code%20的可复用工作流.md\\)' /Users/young/codestation/android-vibe-coding/README.md)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)"
     ],
     "additionalDirectories": [
       "C:\\Users\\uidq9989\\.claude"
