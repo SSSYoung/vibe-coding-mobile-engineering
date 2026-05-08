@@ -31,18 +31,18 @@
 
 📚 **在线阅读**：[掘金专栏](https://juejin.cn/column/7587772965128437770)
 
-## 📝 MCP 相关
+## 📝 文章列表
 
-### 已发布文章
-
-#### （一）Figma Context MCP + Cursor 实现高效 UI 工程化
-**阅读链接**：[Vibe Coding x Android 工程化实践：（一）Figma Context MCP + Cursor 实现高效UI 工程化](docs/AI%20助力%20Android%20工程化实践：（一）Figma%20Context%20MCP%20+%20Cursor%20实现高效UI%20工程化.md)
-
-#### （二）Cursor Rules 构建团队级开发规范
-**阅读链接**：[Vibe Coding x Android 工程化实践：（二）Cursor Rules 构建团队级开发规范](docs/AI%20助力%20Android%20工程化实践：（二）Cursor%20Rules%20构建团队级开发规范.md)
-
-#### （三）自建 MCP Server：让大模型接入内部知识库
-**阅读链接**：[AI 助力 Android 工程化实践：（三）自建 MCP Server：让大模型接入内部知识库](docs/AI%20助力%20Android%20工程化实践：（三）自建%20MCP%20Server：让大模型接入内部知识库.md)
+- [（一）Figma Context MCP + Cursor 实现高效 UI 工程化](docs/AI%20助力%20Android%20工程化实践：（一）Figma%20Context%20MCP%20+%20Cursor%20实现高效UI%20工程化.md)
+- [（二）Cursor Rules 构建团队级开发规范](docs/AI%20助力%20Android%20工程化实践：（二）Cursor%20Rules%20构建团队级开发规范.md)
+- [（三）自建 MCP Server：让大模型接入内部知识库](docs/AI%20助力%20Android%20工程化实践：（三）自建%20MCP%20Server：让大模型接入内部知识库.md)
+- [Skill（一）Android 官方 Skills 实践](docs/Skill：AI%20Agent%20的可复用工作流（一）：Android%20官方%20Skills%20实践.md)
+- [Skill（二）使用 Codex Skill Creator 创建自己的 Skill](docs/Skill：AI%20Agent%20的可复用工作流（二）：使用%20Codex%20Skill%20Creator%20创建自己的%20Skill.md)
+- [SubAgent：Claude Code 的可复用工作流](docs/SubAgent：Claude%20Code%20的可复用工作流.md)
+- [Claude Agent Team：多 AI 实例协同工作](docs/Claude%20Agent%20Team：多%20AI%20实例协同工作.md)
+- [A2UI（一）A2UI 是什么](docs/A2UI：面向%20Agent%20的声明式%20UI%20协议（一）：A2UI%20是什么.md)
+- [A2UI（二）实践_Agent服务端和客户端实现](docs/A2UI：面向%20Agent%20的声明式%20UI%20协议（二）：实践_Agent服务端和客户端实现.md)
+- [A2UI（三）相关概念和技术架构](docs/A2UI：面向%20Agent%20的声明式%20UI%20协议（三）：相关概念和技术架构.md)
 
 ## Skill系列：AI Agent 的可复用工作流
 
