@@ -2,19 +2,6 @@
 
 ⚠️ **声明**：本文内容由 AI 代笔完成，思路推导、Demo 实践与技术审核均由本人完成。
 
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/SSSYoung/android-vibe-coding?style=social)](https://github.com/SSSYoung/android-vibe-coding)
-
-> 聚焦 Android 团队的 AI 工程化落地：MCP 上下文接入、Cursor 规则、内部知识库问答，强调可复用与可实践。
-
-### ✨ 项目特色
-
-- 🎯 **实践导向**：所有内容都基于真实项目经验，避免纸上谈兵
-- 🤖 **Vibe Coding**：探索 AI 在 Android 开发中的实际应用场景
-- 🏗️ **架构约束**：提供可复用的架构模式和最佳实践
-- 🔄 **渐进式重构**：展示如何在不破坏现有代码的前提下进行优化
-- 📚 **持续更新**：系列文章持续更新，紧跟技术发展趋势
-
 ## 📑 目录
 
 - [项目介绍](#-项目介绍)
