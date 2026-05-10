@@ -1,4 +1,4 @@
-# Vibe Coding x Android 工程化实践
+# Vibe Coding 工程化实践
 
 ⚠️ **声明**：本文内容由 AI 代笔完成，思路推导、Demo 实践与技术审核均由本人完成。
 
